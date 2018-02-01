@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            span {
+            	margin-right: 5px;
+				color:#000;
+				font-size: 19px;           
+			}
+			span:hover {
+				color: red
+			}
+        </style>
+    </head>
+    <body>
+       <div >
+       		<div id="startBox">
+	       		<span id="one" class="one">★</span>
+	       		<span id="two" class="two">★</span>
+	       		<span id="three" class="three">★</span>
+	       		<span class="for" id="for">★</span>
+	       		<span id="five" class="five">★</span>
+       		</div>
+        </div>
+        <script>
+        	var strbox = document.getElementById("startBox").getElementsByTagName("span");
+        	for(let i = 0;i<strbox.length;i++){
+        		strbox[i].onclick = function(){
+        			if (this === strbox[0]) {
+	    				this.style.color = "red"
+		  				strbox[1].style.color = '#000'
+	    				strbox[2].style.color = '#000'
+	    				strbox[3].style.color = '#000'
+	    				strbox[4].style.color = '#000'
+	        			
+        			}
+        			if (this === strbox[1]) {
+        				strbox[0].style.color = 'red'
+	        			strbox[1].style.color = 'red'
+	        			strbox[2].style.color = '#000'
+        				strbox[3].style.color = '#000'
+        				strbox[4].style.color = '#000'
+        			}
+        			if (this === strbox[2]) {
+        				strbox[0].style.color = 'red'
+	        			strbox[1].style.color = 'red'
+	        			strbox[2].style.color = 'red'
+	        			strbox[3].style.color = '#000'
+        				strbox[4].style.color = '#000'
+        			}
+    				if (this === strbox[3]) {
+    				strbox[0].style.color = 'red'
+        			strbox[1].style.color = 'red'
+        			strbox[2].style.color = 'red'
+        			strbox[3].style.color = 'red'
+        			strbox[4].style.color = '#000'
+        			}
+        			if (this === strbox[4]) {
+    				strbox[0].style.color = 'red'
+        			strbox[1].style.color = 'red'
+        			strbox[2].style.color = 'red'
+        			strbox[3].style.color = 'red'
+        			strbox[4].style.color = 'red'
+        			}
+        		}
+        	}
+        </script>
+    </body>
+</html>
